@@ -1,20 +1,19 @@
 from flask import  Flask , request , jsonify , render_template
 from flask_cors import CORS 
 from chat_history import chat_history_chain , get_chat_history
-from web_chat import format_chat_history , generate_text
+#from web_chat import format_chat_history , generate_text
 import os
 import time 
 import json 
-
-
+from pathlib import Path
 
 with open("configfile.json", "r") as config_read :
    configfile = json.load(config_read)
 
+BASE_DIR = Path(__file__).resolve().parent  
+TEMPLATE_DIR = (BASE_DIR / configfile["templatepath"]).resolve()
+STATIC_DIR = (BASE_DIR / configfile["staticpath"]).resolve()
 
-BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-TEMPLATE_DIR = configfile["templatepath"]
-STATIC_DIR = configfile["staticpath"]
 
 app = Flask(__name__ , template_folder = TEMPLATE_DIR , static_folder = STATIC_DIR)
 CORS(app)

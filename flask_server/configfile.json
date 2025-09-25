@@ -12,7 +12,8 @@
           "top_p": 0.97
     } ,
 
-    "templatepath" : "F:/BIG2/Projects mk1/web chat/template", 
-    "staticpath" : "F:/BIG2/Projects mk1/web chat/static"
+      "templatepath": "../templates",
+      "staticpath": "../static"
+
 
 }
