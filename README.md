@@ -60,12 +60,18 @@ Place it inside a folder called models/ in the project root:
 
 cpp
 Copy code
-flask-chatbot/
-  ├── app.py
+
+      flask-chatbot/
+  ├── web chat/
+  │     ├── web_chat_server.py
+  │     ├── configfile.json
   ├── static/
+  │     └── style.css
   ├── templates/
+  │     └── home.html
   ├── models/
-      └── mistral-7b-instruct-v0.1.Q4_K_M.gguf
+       └── mistral-7b-instruct-v0.1.Q4_K_M.gguf
+
 Running the App
 Start the Flask server:
 
