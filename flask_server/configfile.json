@@ -1,0 +1,18 @@
+{
+  "modelpath" : "F:/BIG2/MODEL(II)/mistral/mistral-7b-instruct-v0.1.Q4_K_M.gguf" ,
+    "n_ctx" : 2048, 
+    "n_threads" : 6 , 
+    "n_gpu_layers" :0 ,
+
+    "model_configuration" : 
+    {
+         "max_tokens" :200 ,
+         "temperature" : 0.9 ,
+          "top_k" : 50  ,  
+          "top_p": 0.97
+    } ,
+
+    "templatepath" : "F:/BIG2/Projects mk1/web chat/template", 
+    "staticpath" : "F:/BIG2/Projects mk1/web chat/static"
+
+}

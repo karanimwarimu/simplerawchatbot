@@ -1,0 +1,101 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+.venv/
+pip-wheel-metadata/
+*.egg-info/
+dist/
+build/
+
+# Virtual environment created by some tools
+venv/
+ENV/
+env.bak/
+
+# Byte-compiled / optimized / DLL files
+*.so
+
+# Flask / app-specific
+instance/
+*.sqlite3
+*.db
+*.db-journal
+
+# Environment / secrets
+.env
+.env.*     # .env.production, .env.local etc
+secrets.json
+config/*.local
+config/*.secret
+
+# Logs and runtime
+*.log
+logs/
+tmp/
+tmp*/
+*.pid
+*.sock
+
+# Static / frontend build artifacts
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+*.map
+
+# IDEs / editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.swp
+.project
+*.iml
+
+# Docker
+docker-compose.override.yml
+docker-compose.*.yml
+**/Dockerfile.*
+*.log
+
+# Tests / coverage
+.coverage
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+
+# Model files / large binaries (customize extensions you use)
+models/
+models/*
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.gguf
+*.onnx
+*.tar.gz
+*.zip
+
+# LLM / embedding caches / indexes
+*.index
+*.idx
+*.db
+vector_store/
+embeddings/
+cache/
+cache_*/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Optional: allow an exceptions file to force-add single files
+!.gitignore

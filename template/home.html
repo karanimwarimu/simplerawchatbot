@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>built not bot :)</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='man.png') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="{{ url_for('static', filename='webchat.css') }}">
+    <!--<link rel="stylesheet" href="web chat.css">-->
+</head>
+    <body>
+       <div class="chat-container">
+         <h1>MK(1!)</h1>
+         
+        <div id="chat-box" class="chat-box"></div>
+            <div class="input-area">
+                <textarea id="prompt" placeholder="Type your message..."></textarea>
+                <button onclick="sendMessage()">➤</button>
+            </div>
+
+            <div id="loading" class="loading">
+                Thinking.....
+                <div id="loading-time" class="loading-time">
+
+            </div> 
+        </div>>
+
+    </body>
+</head>
+    <script src="{{ url_for('static', filename='webchat.js') }}"></script> 
+  <!-- <script src="web chat.js"></script> -->
+</html>
