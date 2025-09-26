@@ -7,10 +7,12 @@ import time
 import json 
 from pathlib import Path
 
-with open("configfile.json", "r") as config_read :
-   configfile = json.load(config_read)
+BASE_DIR = Path(__file__).resolve().parent
+CONFIG_PATH = BASE_DIR / "configfile.json"
 
-BASE_DIR = Path(__file__).resolve().parent  
+with open(CONFIG_PATH, "r") as config_read:
+    configfile = json.load(config_read)
+
 TEMPLATE_DIR = (BASE_DIR / configfile["templatepath"]).resolve()
 STATIC_DIR = (BASE_DIR / configfile["staticpath"]).resolve()
 
@@ -27,7 +29,7 @@ def server_work():
    data =  request.get_json()
    prompt = data.get("prompt" , " ")
    user_id = request.remote_addr
-   role = "user" 
+   role = "user"
    chat_history_chain(user_id , role , prompt )
    chat_history = get_chat_history(user_id)
 

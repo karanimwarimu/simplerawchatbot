@@ -1,8 +1,12 @@
 from llama_cpp import Llama
 import json
+from pathlib  import Path 
 
-with open("configfile.json" , "r") as json_read_file :
-    configfile= json.load(json_read_file)
+BASE_DIR = Path(__file__).resolve().parent
+CONFIG_PATH = BASE_DIR / "configfile.json"
+
+with open(CONFIG_PATH, "r") as config_read:
+    configfile = json.load(config_read)
 
 llama_pipeline = Llama(  
     model_path = configfile["modelpath"] , 
