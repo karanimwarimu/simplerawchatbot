@@ -22,7 +22,7 @@ app = Flask(__name__ , template_folder = TEMPLATE_DIR , static_folder = STATIC_D
 CORS(app)
 @app.route('/') 
 def homepageopen():
-   return render_template('home.html')
+   return render_template('RagchatAppp.html')
 
 
 @app.route('/ASK' , methods =['POST'])
