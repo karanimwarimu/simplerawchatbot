@@ -2,6 +2,7 @@ from flask import  Flask , request , jsonify , render_template
 from flask_cors import CORS 
 from chat_history import chat_history_chain , get_chat_history
 #from web_chat import format_chat_history , generate_text
+from chat_service import format_chat_history , generate_text
 import os
 import time 
 import json 
