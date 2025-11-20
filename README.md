@@ -1,16 +1,16 @@
 # Simple Flask Chatbot
 
-A minimal chatbot app built with **Flask**, **HTML/CSS/JS** for the UI, and a local **Mistral 7B GGUF** model.  
+A minimal chatbot app built with **Flask**, **HTML/CSS/JS** for the UI, and gemini api . 
 Chats are stored **in memory** (no database) for the session. Both the **model** and the **UI** are served from the Flask server.
 
 ---
 
 ## Features
-- 🗨️ Chat with a local **Mistral 7B** model
+- 🗨️ Chat with gemini 2.5 model
 - 💾 In-memory chat history (resets on server restart)
 - 🌐 Simple HTML/CSS/JS frontend
 - 🐍 Flask server backend
-- 🔒 Runs fully locally (no external API required)
+
 
 ---
 
@@ -53,13 +53,7 @@ source venv/bin/activate
 bash
 Copy code
 pip install -r requirements.txt
-5. Add the Mistral 7B GGUF model
-Download the model file (mistral-7b-instruct-v0.1.Q4_K_M.gguf or similar).
 
-Place it inside a folder called models/ in the project root:
-
-cpp
-Copy code
 
       flask-chatbot/
   ├── web chat/
@@ -69,8 +63,7 @@ Copy code
   │     └── style.css
   ├── templates/
   │     └── home.html
-  ├── models/
-       └── mistral-7b-instruct-v0.1.Q4_K_M.gguf
+
 
 Running the App
 Start the Flask server:
@@ -93,6 +86,5 @@ Start chatting with the bot.
 Notes
 Chat history is only in memory. Restarting the server clears it.
 
-Models can be large; ensure you have enough RAM/VRAM.
 
 To run with Docker, you can extend this project with a Dockerfile.
