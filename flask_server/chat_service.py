@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import sys 
 import  google.generativeai as genai
 
-load_dotenv()
+#load_dotenv()
 api_key = os.getenv("GOOGLE_APIKEY")
 
 if not api_key :
