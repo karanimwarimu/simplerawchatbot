@@ -22,7 +22,7 @@ def format_chat_history(chat_history) :
 '''
 
 def format_chat_history(chat_history):
-messages = []
+    messages = []
     for msg in chat_history:
         role = "model" if msg["role"] == "assistant" else "user"
         messages.append({"role": role, "parts": msg["content"]})
