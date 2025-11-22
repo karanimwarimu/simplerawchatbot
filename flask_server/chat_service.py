@@ -41,7 +41,7 @@ def generate_text(prompt: str, userid=None) -> str:
 
     response = model.generate_content(history)
     return response.text
-'''
+"""
 def generate_text(prompt : str ) -> str:
     full_prompt = f"['INST'] {prompt} ['/INST']"
     
@@ -52,4 +52,4 @@ def generate_text(prompt : str ) -> str:
     response = model.generate_content(full_prompt)
     
     return response.text
-    
+"""
