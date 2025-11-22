@@ -5,13 +5,7 @@ import  google.generativeai as genai
 
 #load_dotenv()
 api_key = os.getenv("GOOGLE_API_KEY")
-
-if not api_key :
-    print("Error , invalid key !")
-    sys.exit(1)
-else :
-    print("key fetched :)" )
-    
+print(f"api_key : {api_key}")
 
 def format_chat_history(chat_history) :
     formatted_prompt = "<s>"
