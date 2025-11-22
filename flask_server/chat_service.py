@@ -4,7 +4,7 @@ import sys
 import  google.generativeai as genai
 
 #load_dotenv()
-api_key = os.getenv("GOOGLE_APIKEY")
+api_key = os.getenv("GOOGLE_API_KEY")
 
 if not api_key :
     print("Error , invalid key !")
