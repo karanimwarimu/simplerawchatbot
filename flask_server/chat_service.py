@@ -23,10 +23,10 @@ def format_chat_history(chat_history) :
 
 def format_chat_history(chat_history):
 messages = []
-for msg in chat_history:
-    role = "model" if msg["role"] == "assistant" else "user"
-    messages.append({"role": role, "parts": msg["content"]})
-return messages
+    for msg in chat_history:
+        role = "model" if msg["role"] == "assistant" else "user"
+        messages.append({"role": role, "parts": msg["content"]})
+    return messages
 
 def generate_text(prompt: str, userid=None) -> str:
     genai.configure(api_key=api_key)
